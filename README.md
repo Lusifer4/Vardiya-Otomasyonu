@@ -14,5 +14,5 @@ Projeyi kullanmak için, öncelikle çalışanların vardiya bilgilerini kaydetm
 
 Gereksinimler
 
--İşletim sistemi: Windows 7 veya üstü
--.NET Framework: 4.5 veya üstü
+- İşletim sistemi: Windows 7 veya üstü
+- .NET Framework: 4.5 veya üstü
