@@ -26,5 +26,10 @@ namespace WindowsFormsApp1
         {
             this.Close();
         }
+
+        private void vardiya_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -16,16 +16,18 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
-
+        Personel per = new Personel();
+        vardiya vardiya = new vardiya();
+        Gecmis gecmis = new Gecmis();
         private void bunifuImageButton1_Click(object sender, EventArgs e)//çarpı
         {
             Application.Exit();
         }
-        yeni_kullanici yeni = new yeni_kullanici();
-        private void btn_Personelekle_Click(object sender, EventArgs e)//Personel ekleme butonu
+        
+        private void btn_Personelekle_Click(object sender, EventArgs e)//Personel butonu
         {
             
-            yeni.ShowDialog();
+            per.ShowDialog();
         }
 
         private void image_geri_Click(object sender, EventArgs e)//geri tuşu
@@ -79,14 +81,14 @@ namespace WindowsFormsApp1
             move = false;
         }
 
-        vardiya vardiya = new vardiya();
+        
         private void btn_Vardiyadegis_Click(object sender, EventArgs e)//vardiya değiştir butonu
         {
             vardiya.ShowDialog();
         }
 
 
-        Gecmis gecmis = new Gecmis();
+        
         private void btn_Gecmis_Click(object sender, EventArgs e)//vardiya geçmişi butonu
         {
             gecmis.ShowDialog();

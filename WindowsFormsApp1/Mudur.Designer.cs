@@ -42,7 +42,7 @@
             this.bunifuImageButton4 = new Bunifu.Framework.UI.BunifuImageButton();
             this.btn_Gecmis = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btn_Vardiyadegis = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.btn_Personelekle = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btn_Personel = new Bunifu.Framework.UI.BunifuThinButton2();
             this.image_geri = new Bunifu.Framework.UI.BunifuImageButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -233,31 +233,31 @@
             this.btn_Vardiyadegis.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Vardiyadegis.Click += new System.EventHandler(this.btn_Vardiyadegis_Click);
             // 
-            // btn_Personelekle
+            // btn_Personel
             // 
-            this.btn_Personelekle.ActiveBorderThickness = 1;
-            this.btn_Personelekle.ActiveCornerRadius = 20;
-            this.btn_Personelekle.ActiveFillColor = System.Drawing.Color.Gray;
-            this.btn_Personelekle.ActiveForecolor = System.Drawing.Color.Transparent;
-            this.btn_Personelekle.ActiveLineColor = System.Drawing.Color.Gray;
-            this.btn_Personelekle.BackColor = System.Drawing.Color.DimGray;
-            this.btn_Personelekle.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Personelekle.BackgroundImage")));
-            this.btn_Personelekle.ButtonText = "Personel Ekle";
-            this.btn_Personelekle.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Personelekle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btn_Personelekle.ForeColor = System.Drawing.Color.SeaGreen;
-            this.btn_Personelekle.IdleBorderThickness = 1;
-            this.btn_Personelekle.IdleCornerRadius = 30;
-            this.btn_Personelekle.IdleFillColor = System.Drawing.Color.Transparent;
-            this.btn_Personelekle.IdleForecolor = System.Drawing.Color.White;
-            this.btn_Personelekle.IdleLineColor = System.Drawing.Color.White;
-            this.btn_Personelekle.Location = new System.Drawing.Point(80, 513);
-            this.btn_Personelekle.Margin = new System.Windows.Forms.Padding(5);
-            this.btn_Personelekle.Name = "btn_Personelekle";
-            this.btn_Personelekle.Size = new System.Drawing.Size(186, 50);
-            this.btn_Personelekle.TabIndex = 15;
-            this.btn_Personelekle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btn_Personelekle.Click += new System.EventHandler(this.btn_Personelekle_Click);
+            this.btn_Personel.ActiveBorderThickness = 1;
+            this.btn_Personel.ActiveCornerRadius = 20;
+            this.btn_Personel.ActiveFillColor = System.Drawing.Color.Gray;
+            this.btn_Personel.ActiveForecolor = System.Drawing.Color.Transparent;
+            this.btn_Personel.ActiveLineColor = System.Drawing.Color.Gray;
+            this.btn_Personel.BackColor = System.Drawing.Color.DimGray;
+            this.btn_Personel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Personel.BackgroundImage")));
+            this.btn_Personel.ButtonText = "Personel  işlemleri";
+            this.btn_Personel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Personel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btn_Personel.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btn_Personel.IdleBorderThickness = 1;
+            this.btn_Personel.IdleCornerRadius = 30;
+            this.btn_Personel.IdleFillColor = System.Drawing.Color.Transparent;
+            this.btn_Personel.IdleForecolor = System.Drawing.Color.White;
+            this.btn_Personel.IdleLineColor = System.Drawing.Color.White;
+            this.btn_Personel.Location = new System.Drawing.Point(80, 513);
+            this.btn_Personel.Margin = new System.Windows.Forms.Padding(5);
+            this.btn_Personel.Name = "btn_Personel";
+            this.btn_Personel.Size = new System.Drawing.Size(186, 50);
+            this.btn_Personel.TabIndex = 15;
+            this.btn_Personel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_Personel.Click += new System.EventHandler(this.btn_Personelekle_Click);
             // 
             // image_geri
             // 
@@ -280,7 +280,7 @@
             this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(915, 654);
             this.Controls.Add(this.image_geri);
-            this.Controls.Add(this.btn_Personelekle);
+            this.Controls.Add(this.btn_Personel);
             this.Controls.Add(this.btn_Vardiyadegis);
             this.Controls.Add(this.btn_Gecmis);
             this.Controls.Add(this.txt_Hosgeldiniz);
@@ -321,7 +321,7 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton4;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
-        private Bunifu.Framework.UI.BunifuThinButton2 btn_Personelekle;
+        private Bunifu.Framework.UI.BunifuThinButton2 btn_Personel;
         private Bunifu.Framework.UI.BunifuThinButton2 btn_Vardiyadegis;
         private Bunifu.Framework.UI.BunifuThinButton2 btn_Gecmis;
         private Bunifu.Framework.UI.BunifuImageButton image_geri;

@@ -111,7 +111,7 @@ namespace WindowsFormsApp1
 
         private void img_facebook_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Facebook Adresimiz Bulunmamaktadır");
+            MessageBox.Show("Yakında...");
         }
 
         private void img_instagram_Click(object sender, EventArgs e)

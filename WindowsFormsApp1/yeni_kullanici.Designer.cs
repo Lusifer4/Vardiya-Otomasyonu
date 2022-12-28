@@ -190,12 +190,13 @@
             this.btnGiris.IdleFillColor = System.Drawing.Color.Transparent;
             this.btnGiris.IdleForecolor = System.Drawing.Color.Black;
             this.btnGiris.IdleLineColor = System.Drawing.Color.Gray;
-            this.btnGiris.Location = new System.Drawing.Point(902, 682);
+            this.btnGiris.Location = new System.Drawing.Point(863, 682);
             this.btnGiris.Margin = new System.Windows.Forms.Padding(5);
             this.btnGiris.Name = "btnGiris";
             this.btnGiris.Size = new System.Drawing.Size(248, 50);
             this.btnGiris.TabIndex = 5;
             this.btnGiris.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnGiris.Click += new System.EventHandler(this.btnGiris_Click);
             // 
             // txt_Ad
             // 
@@ -315,8 +316,8 @@
             this.box_Görevli.FormattingEnabled = true;
             this.box_Görevli.Items.AddRange(new object[] {
             "Müdür",
-            "Personel",
-            "Memur"});
+            "Memur",
+            "Personel"});
             this.box_Görevli.Location = new System.Drawing.Point(748, 376);
             this.box_Görevli.Name = "box_Görevli";
             this.box_Görevli.Size = new System.Drawing.Size(363, 24);

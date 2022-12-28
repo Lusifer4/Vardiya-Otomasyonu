@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Reflection.Emit;
@@ -36,7 +37,11 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void bunifuImageButton4_Click(object sender, EventArgs e)
+        static string conString = "Data Source=.;Initial Catalog=personel_sistemi;Integrated Security=True";
+
+        SqlConnection baglanti = new SqlConnection(conString);
+
+        private void bunifuImageButton4_Click(object sender, EventArgs e)//çarpı
         {
             Application.Exit();
         }
@@ -190,6 +195,27 @@ namespace WindowsFormsApp1
 
         }
 
-        
+        private void btnGiris_Click(object sender, EventArgs e)
+        {
+
+            string sorgu = "insert into personel_tablo(TC,ad,soyad,cinsiyet,level,gorevi,eposta,adres,tel)values(@TC,@ad,@soyad,@cinsiyet,@level,@gorevi,@eposta,@adres,@tel)";
+            SqlCommand komut = new SqlCommand(sorgu, baglanti);
+            komut.Parameters.AddWithValue("@TC", txt_TC.Text);
+            komut.Parameters.AddWithValue("@ad", txt_Ad.Text);
+            komut.Parameters.AddWithValue("@soyad",txt_Soyad.Text) ;
+            komut.Parameters.AddWithValue("@cinsiyet",box_cinsiyet.Text);
+            komut.Parameters.AddWithValue("@level", box_Görevli.Text);
+            komut.Parameters.AddWithValue("@gorevi", box_Görevi.Text);
+            komut.Parameters.AddWithValue("@tel", txt_Tel.Text);
+            komut.Parameters.AddWithValue("@eposta",txt_Eposta.Text) ;
+            komut.Parameters.AddWithValue("@adres", txt_Adres.Text);
+            baglanti.Open();
+            komut.ExecuteNonQuery();
+            baglanti.Close();
+            
+            MessageBox.Show("Kulanıcı Eklendi");
+           
+
+        }
     }
 }
