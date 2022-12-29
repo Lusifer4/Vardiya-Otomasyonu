@@ -1,7 +1,5 @@
 # C# Vardiya-Otomasyonu
 
-# C# Vardiya-Otomasyonu
-
 Bu proje, vardiya yönetim süreçlerinin otomatikleştirilmesi amacıyla tasarlandı. Proje, çalışanların vardiya bilgilerini kaydetme, takip etme ve raporlama gibi işlemleri kolaylaştırır.
 
 # Özellikler
