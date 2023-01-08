@@ -11,6 +11,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
+
+
 namespace WindowsFormsApp1
 {
     public partial class vardiya : Form
@@ -20,6 +22,8 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
+
+
         static string conString = "Data Source=.;Initial Catalog=personel_sistemi;Integrated Security=True";
         SqlConnection connection = new SqlConnection(conString);
 
@@ -27,6 +31,8 @@ namespace WindowsFormsApp1
         {
             Application.Exit();
         }
+
+
 
         private void image_geri_Click(object sender, EventArgs e)
         {
@@ -95,17 +101,17 @@ namespace WindowsFormsApp1
             // TODO: Bu kod satırı 'personel_sistemiDataSet.kampus_ici' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
             this.kampus_iciTableAdapter.Fill(this.personel_sistemiDataSet.kampus_ici);
             // TODO: Bu kod satırı 'personel_sistemiDataSet.kampus_giris' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
-        
+
             // TODO: Bu kod satırı 'personel_sistemiDataSet.kampus_giris' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
             //   this.kampus_girisTableAdapter.Fill(this.personel_sistemiDataSet.kampus_giris);
             // TODO: Bu kod satırı 'personel_sistemiDataSet.kampus_ici' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
 
 
 
-         /*   string yenile = "Select * from kampus_giris ";
-            baglanti.Open();
-            SqlDataAdapter da = new SqlDataAdapter(yenile, baglanti);
-            SqlCommandBuilder komut = new SqlCommandBuilder(da);*/
+            /*   string yenile = "Select * from kampus_giris ";
+               baglanti.Open();
+               SqlDataAdapter da = new SqlDataAdapter(yenile, baglanti);
+               SqlCommandBuilder komut = new SqlCommandBuilder(da);*/
 
 
             /*DataSet dset = new DataSet();
@@ -124,8 +130,8 @@ namespace WindowsFormsApp1
 
 
 
-
-            connection.Open();
+            /*
+           connection.Open();
             string sql = "Select * from kampus_giris ";
             SqlCommand command = new SqlCommand(sql, connection);
             SqlDataReader reader = command.ExecuteReader();
@@ -136,8 +142,10 @@ namespace WindowsFormsApp1
                 veriler.Add(reader["08:00-16:00"].ToString());    
                 veriler.Add(reader["16:00-24:00"].ToString());
                 veriler.Add(reader["00:00-08:00"].ToString());
-            }
+                // data_pazartesi_0.DataSource = veriler.ToArray();
 
+            }
+        
 
             int currentIndex = 0;
 
@@ -151,39 +159,11 @@ namespace WindowsFormsApp1
 
                 currentIndex++;
 
-                // MessageBox.Show(currentValue);
-                //this.kampus_girisTableAdapter.Fill(this.personel_sistemiDataSet.kampus_giris);
-              //  data_pazartesi_0.DataSource = currentValue;
+
+       
 
 
 
-
-               // string yenile = "Select * from personel_tablo";
-
-                /*SqlDataAdapter da = new SqlDataAdapter(sql, connection);
-                SqlCommandBuilder komut = new SqlCommandBuilder(da);
-                DataSet dset = new DataSet();
-                da.Fill(dset, "kampus_giris");
-                data_pazartesi_0.DataSource = dset.Tables[0];*/
-
-
-              /*BindingSource bindingSource = new BindingSource();
-                bindingSource.DataSource = currentValue;
-                   
-                data_pazartesi_0.DataSource = bindingSource*/;
-
-
-                // data_pazartesi_0.Rows.Add(currentValue);
-
-
-                /*
-                DataSet dset = new DataSet();
-                //da.Fill(dset, "personel_tablo");
-
-                BindingSource bindingSource = new BindingSource();
-                bindingSource.DataSource = currentValue;
-
-                data_pazartesi_0.DataSource = bindingSource;*/
                 MessageBox.Show(currentValue);
                 //data_pazartesi_0.DataSource = tablo;
                 // Console.WriteLine(currentValue);
@@ -195,17 +175,33 @@ namespace WindowsFormsApp1
                       Console.Write(currentValue[i + 2] + " ");
                       Console.WriteLine();
                   }*/
-                for (int i = 0; i < veriler.Count; i += 3)
-                {
-                    Console.Write(currentValue[i] + " ");
-                    Console.Write(currentValue[i + 1] + " ");
-                    Console.Write(currentValue[i + 2] + " ");
-                    Console.WriteLine();
-                }
+            /*  for (int i = 0; i < veriler.Count; i += 3)
+              {
+                  Console.Write(currentValue[i] + " ");
+                  Console.Write(currentValue[i + 1] + " ");
+                  Console.Write(currentValue[i + 2] + " ");
+                  Console.WriteLine();
+              }
 
-            }
+          }*/
 
-         
+
+            // sql ile veritabanındaki kampus_giris adlı tabloyu çekip datagridview'e aktarma
+            /*  string sql = "Select * from kampus_giris ";
+              SqlDataAdapter da = new SqlDataAdapter(sql, connection);
+              DataTable dt = new DataTable();
+              da.Fill(dt);
+              data_pazartesi_0.DataSource = dt;*/
+
+
+
+            // sql ile veritabanındaki kampus_giris adlı tabloyu çekiyoruz ve gelen veri aynı satırda olmamasını kontrol ediyoru ve data_pazartesi_0 adlı datagridview'e aktarıyoruz
+
+            string sql = "Select * from kampus_giris ";
+            SqlDataAdapter da = new SqlDataAdapter(sql, connection);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            data_pazartesi_0.DataSource = dt;
 
             connection.Close();
         }
@@ -215,6 +211,47 @@ namespace WindowsFormsApp1
 
         }
 
-      
+        private void btncikti_Click(object sender, EventArgs e)
+        {
+
+            //  datagridview'leri excel halinde çıktı alıyoruz
+
+            Microsoft.Office.Interop.Excel.Application excel = new Microsoft.Office.Interop.Excel.Application();
+              excel.Visible = true;
+              excel.Application.Workbooks.Add(Type.Missing);
+              for (int i = 1; i < data_ici_pazartesi_8.Columns.Count + 1; i++)
+              {
+                  excel.Cells[1, i] = data_ici_pazartesi_8.Columns[i - 1].HeaderText;
+              }
+              for (int i = 0; i < data_ici_pazartesi_8.Rows.Count - 1; i++)
+              {
+                  for (int j = 0; j < data_ici_pazartesi_8.Columns.Count; j++)
+                  {
+                      excel.Cells[i + 2, j + 1] = data_ici_pazartesi_8.Rows[i].Cells[j].Value.ToString();
+                  }
+              }
+              excel.Columns.AutoFit();
+              excel.Visible = true;
+              excel.UserControl = true;
+
+              Microsoft.Office.Interop.Excel.Application excel2 = new Microsoft.Office.Interop.Excel.Application();
+              excel2.Visible = true;
+              excel2.Application.Workbooks.Add(Type.Missing);
+              for (int i = 1; i < data_pazartesi_0.Columns.Count + 1; i++)
+              {
+                  excel2.Cells[1, i] = data_pazartesi_0.Columns[i - 1].HeaderText;
+              }
+              for (int i = 0; i < data_pazartesi_0.Rows.Count - 1; i++)
+              {
+                  for (int j = 0; j < data_pazartesi_0.Columns.Count; j++)
+                  {
+                      excel2.Cells[i + 2, j + 1] = data_pazartesi_0.Rows[i].Cells[j].Value.ToString();
+                  }
+              }
+              excel2.Columns.AutoFit();
+              excel2.Visible = true;
+              excel2.UserControl = true;
+
+        }
     }
 }

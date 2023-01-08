@@ -35,3 +35,4 @@ C:\Users\erdem\OneDrive\Masaüstü\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\W
 C:\Users\erdem\OneDrive\Masaüstü\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CopyComplete
 C:\Users\erdem\OneDrive\Masaüstü\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 C:\Users\erdem\OneDrive\Masaüstü\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\erdem\OneDrive\Masaüstü\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.ResolveComReference.cache

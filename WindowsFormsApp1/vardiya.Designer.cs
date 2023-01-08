@@ -67,6 +67,7 @@
             this.kampus_girisTableAdapter = new WindowsFormsApp1.personel_sistemiDataSetTableAdapters.kampus_girisTableAdapter();
             this.kampus_iciTableAdapter = new WindowsFormsApp1.personel_sistemiDataSetTableAdapters.kampus_iciTableAdapter();
             this.btn_vardiaOlustur = new System.Windows.Forms.Button();
+            this.btncikti = new System.Windows.Forms.Button();
             this.bunifuGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -420,11 +421,22 @@
             this.btn_vardiaOlustur.UseVisualStyleBackColor = true;
             this.btn_vardiaOlustur.Click += new System.EventHandler(this.btn_vardiaOlustur_Click);
             // 
+            // btncikti
+            // 
+            this.btncikti.Location = new System.Drawing.Point(650, 566);
+            this.btncikti.Name = "btncikti";
+            this.btncikti.Size = new System.Drawing.Size(75, 23);
+            this.btncikti.TabIndex = 69;
+            this.btncikti.Text = "Çıktı Al";
+            this.btncikti.UseVisualStyleBackColor = true;
+            this.btncikti.Click += new System.EventHandler(this.btncikti_Click);
+            // 
             // vardiya
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1386, 718);
+            this.Controls.Add(this.btncikti);
             this.Controls.Add(this.btn_vardiaOlustur);
             this.Controls.Add(this.bunifuCustomLabel6);
             this.Controls.Add(this.bunifuCustomLabel5);
@@ -493,5 +505,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.Button btn_vardiaOlustur;
+        private System.Windows.Forms.Button btncikti;
     }
 }
