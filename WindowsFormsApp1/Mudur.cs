@@ -93,5 +93,10 @@ namespace WindowsFormsApp1
         {
             gecmis.ShowDialog();
         }
+
+        private void bunifuGradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

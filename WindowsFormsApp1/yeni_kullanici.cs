@@ -20,6 +20,30 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
+
+        bool durum;
+            void mukerrer() {
+
+            baglanti.Open();
+            SqlCommand komut = new SqlCommand("select * from mudur_tablo where eposta=@eposta", baglanti);
+            komut.Parameters.AddWithValue("@eposta", txt_Eposta);
+            SqlDataReader dr = komut.ExecuteReader();
+
+            if (dr.Read())
+            {
+                durum = false;
+
+            }
+            else
+            {
+                durum = true;
+            }
+            baglanti.Close();
+        
+        }
+
+   
+
         private void yeni_kullanici_Load(object sender, EventArgs e)
         {
             string seciniz = "Seçiniz";
@@ -216,23 +240,37 @@ namespace WindowsFormsApp1
             {
                 try
                 {
-                    baglanti = new SqlConnection(conString);
-                    baglanti.Open();
-                    string sqlKomut = "insert into mudur_tablo(sicil_no,TC,ad,soyad,cinsiyet,level,eposta,adres,tel)values(@sicil_no,@TC,@ad,@soyad,@cinsiyet,@level,@eposta,@adres,@tel)";
-                    SqlCommand komut = new SqlCommand(sqlKomut, baglanti);
-                    komut.Parameters.AddWithValue("@sicil_no", txt_sicil.Text);
-                    komut.Parameters.AddWithValue("@TC", txt_TC.Text);
-                    komut.Parameters.AddWithValue("@ad", txt_Ad.Text);
-                    komut.Parameters.AddWithValue("@soyad", txt_Soyad.Text);
-                    komut.Parameters.AddWithValue("@cinsiyet", box_cinsiyet.Text);
-                    komut.Parameters.AddWithValue("@level", box_Görevli.Text);
-                    
-                    komut.Parameters.AddWithValue("@tel", txt_Tel.Text);
-                    komut.Parameters.AddWithValue("@eposta", txt_Eposta.Text);
-                    komut.Parameters.AddWithValue("@adres", txt_Adres.Text);
 
-                    komut.ExecuteNonQuery();
-                    MessageBox.Show("Kulanıcı Eklendi");
+
+
+                     mukerrer();
+                    if (durum == true)
+                    {
+
+
+                        baglanti = new SqlConnection(conString);
+                        baglanti.Open();
+                        string sqlKomut = "insert into mudur_tablo(sicil_no,TC,ad,soyad,cinsiyet,level,eposta,adres,tel)values(@sicil_no,@TC,@ad,@soyad,@cinsiyet,@level,@eposta,@adres,@tel)";
+                        SqlCommand komut = new SqlCommand(sqlKomut, baglanti);
+                        komut.Parameters.AddWithValue("@sicil_no", txt_sicil.Text);
+                        komut.Parameters.AddWithValue("@TC", txt_TC.Text);
+                        komut.Parameters.AddWithValue("@ad", txt_Ad.Text);
+                        komut.Parameters.AddWithValue("@soyad", txt_Soyad.Text);
+                        komut.Parameters.AddWithValue("@cinsiyet", box_cinsiyet.Text);
+                        komut.Parameters.AddWithValue("@level", box_Görevli.Text);
+
+                        komut.Parameters.AddWithValue("@tel", txt_Tel.Text);
+                        komut.Parameters.AddWithValue("@eposta", txt_Eposta.Text);
+                        komut.Parameters.AddWithValue("@adres", txt_Adres.Text);
+
+                        komut.ExecuteNonQuery();
+                        MessageBox.Show("Kulanıcı Eklendi");
+                    }
+                    else
+                    {
+                        MessageBox.Show("HATA!");
+                    }
+
                 }
 
                 catch (Exception ex)
@@ -251,6 +289,12 @@ namespace WindowsFormsApp1
             else { 
             try
             {
+
+                   /* mukerrer();
+                    if(durum == true)
+                    {*/
+
+                   
                 baglanti = new SqlConnection(conString);
                 baglanti.Open();
                 string sqlKomut = "insert into personel_tablo(sicil_no,TC,ad,soyad,cinsiyet,level,gorevi,eposta,adres,tel)values(@sicil_no,@TC,@ad,@soyad,@cinsiyet,@level,@gorevi,@eposta,@adres,@tel)";
@@ -267,7 +311,12 @@ namespace WindowsFormsApp1
                 komut.Parameters.AddWithValue("@adres", txt_Adres.Text);
 
                 komut.ExecuteNonQuery();
-                MessageBox.Show("Kulanıcı Eklendi");
+                    MessageBox.Show("Kulanıcı Eklendi");
+                    /*}
+                    else
+                    {
+                        MessageBox.Show("Bu kayıt zaten var", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }*/
             }
             catch (Exception ex)
             {
@@ -319,6 +368,14 @@ namespace WindowsFormsApp1
             formRakamGirisSorgusu(e);
         }
 
-      
+        private void bunifuGradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void txt_Eposta_OnValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

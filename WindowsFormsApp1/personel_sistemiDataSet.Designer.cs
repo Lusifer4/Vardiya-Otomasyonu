@@ -2764,7 +2764,7 @@ namespace WindowsFormsApp1.personel_sistemiDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::WindowsFormsApp1.Properties.Settings.Default.personel_sistemiConnectionString;
+            this._connection.ConnectionString = global::WindowsFormsApp1.Properties.Settings.Default.personel_sistemiConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3006,7 +3006,7 @@ namespace WindowsFormsApp1.personel_sistemiDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::WindowsFormsApp1.Properties.Settings.Default.personel_sistemiConnectionString;
+            this._connection.ConnectionString = global::WindowsFormsApp1.Properties.Settings.Default.personel_sistemiConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3315,7 +3315,7 @@ SELECT mudur_id, sicil_no, TC, ad, soyad, cinsiyet, level, tel, eposta, adres FR
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::WindowsFormsApp1.Properties.Settings.Default.personel_sistemiConnectionString;
+            this._connection.ConnectionString = global::WindowsFormsApp1.Properties.Settings.Default.personel_sistemiConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3964,7 +3964,7 @@ SELECT personel_id, sicil_no, TC, ad, soyad, cinsiyet, level, gorevi, tel, epost
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::WindowsFormsApp1.Properties.Settings.Default.personel_sistemiConnectionString;
+            this._connection.ConnectionString = global::WindowsFormsApp1.Properties.Settings.Default.personel_sistemiConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

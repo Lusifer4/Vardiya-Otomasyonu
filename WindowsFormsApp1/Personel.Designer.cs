@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Personel));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btn_Sil = new Bunifu.Framework.UI.BunifuThinButton2();
             this.txt_sicil = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.box_cinsiyet = new System.Windows.Forms.ComboBox();
@@ -62,18 +62,21 @@
             this.personel_sistemiDataSet1 = new WindowsFormsApp1.personel_sistemiDataSet();
             this.personeltabloBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.txt_ara = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.adresDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.epostaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.goreviDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.levelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cinsiyetDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.soyadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.adDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tCDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sicilnoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.personel_DataGrid = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.personeltabloBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.personel_DataGrid = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.personelsistemiDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.personeltabloBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
+            this.personelidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sicilnoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tCDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.adDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.soyadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cinsiyetDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.levelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.goreviDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.epostaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.adresDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.image_geri)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -85,8 +88,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.personeltabloBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.personel_sistemiDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.personeltabloBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.personel_DataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.personeltabloBindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personel_DataGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personelsistemiDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personeltabloBindingSource4)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_Sil
@@ -478,8 +483,9 @@
             this.bunifuGradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(1435, 77);
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(1386, 77);
             this.bunifuGradientPanel1.TabIndex = 34;
+            this.bunifuGradientPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.bunifuGradientPanel1_Paint);
             this.bunifuGradientPanel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bunifuGradientPanel1_MouseDown);
             this.bunifuGradientPanel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.bunifuGradientPanel1_MouseMove);
             this.bunifuGradientPanel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.bunifuGradientPanel1_MouseUp);
@@ -549,96 +555,30 @@
             this.txt_ara.Enter += new System.EventHandler(this.txt_ara_Enter);
             this.txt_ara.Leave += new System.EventHandler(this.txt_ara_Leave);
             // 
-            // adresDataGridViewTextBoxColumn
+            // personeltabloBindingSource3
             // 
-            this.adresDataGridViewTextBoxColumn.DataPropertyName = "adres";
-            this.adresDataGridViewTextBoxColumn.HeaderText = "Adres";
-            this.adresDataGridViewTextBoxColumn.Name = "adresDataGridViewTextBoxColumn";
-            this.adresDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // epostaDataGridViewTextBoxColumn
-            // 
-            this.epostaDataGridViewTextBoxColumn.DataPropertyName = "eposta";
-            this.epostaDataGridViewTextBoxColumn.HeaderText = "E-Posta";
-            this.epostaDataGridViewTextBoxColumn.Name = "epostaDataGridViewTextBoxColumn";
-            this.epostaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // telDataGridViewTextBoxColumn
-            // 
-            this.telDataGridViewTextBoxColumn.DataPropertyName = "tel";
-            this.telDataGridViewTextBoxColumn.HeaderText = "Telefon";
-            this.telDataGridViewTextBoxColumn.Name = "telDataGridViewTextBoxColumn";
-            this.telDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // goreviDataGridViewTextBoxColumn
-            // 
-            this.goreviDataGridViewTextBoxColumn.DataPropertyName = "gorevi";
-            this.goreviDataGridViewTextBoxColumn.HeaderText = "Görevi";
-            this.goreviDataGridViewTextBoxColumn.Name = "goreviDataGridViewTextBoxColumn";
-            this.goreviDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // levelDataGridViewTextBoxColumn
-            // 
-            this.levelDataGridViewTextBoxColumn.DataPropertyName = "level";
-            this.levelDataGridViewTextBoxColumn.HeaderText = "Görevli";
-            this.levelDataGridViewTextBoxColumn.Name = "levelDataGridViewTextBoxColumn";
-            this.levelDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // cinsiyetDataGridViewTextBoxColumn
-            // 
-            this.cinsiyetDataGridViewTextBoxColumn.DataPropertyName = "cinsiyet";
-            this.cinsiyetDataGridViewTextBoxColumn.HeaderText = "Cinsiyet";
-            this.cinsiyetDataGridViewTextBoxColumn.Name = "cinsiyetDataGridViewTextBoxColumn";
-            this.cinsiyetDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // soyadDataGridViewTextBoxColumn
-            // 
-            this.soyadDataGridViewTextBoxColumn.DataPropertyName = "soyad";
-            this.soyadDataGridViewTextBoxColumn.HeaderText = "Soyad";
-            this.soyadDataGridViewTextBoxColumn.Name = "soyadDataGridViewTextBoxColumn";
-            this.soyadDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // adDataGridViewTextBoxColumn
-            // 
-            this.adDataGridViewTextBoxColumn.DataPropertyName = "ad";
-            this.adDataGridViewTextBoxColumn.HeaderText = "Ad";
-            this.adDataGridViewTextBoxColumn.Name = "adDataGridViewTextBoxColumn";
-            this.adDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // tCDataGridViewTextBoxColumn
-            // 
-            this.tCDataGridViewTextBoxColumn.DataPropertyName = "TC";
-            this.tCDataGridViewTextBoxColumn.HeaderText = "TC Kimlik Numarası";
-            this.tCDataGridViewTextBoxColumn.Name = "tCDataGridViewTextBoxColumn";
-            this.tCDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // sicilnoDataGridViewTextBoxColumn
-            // 
-            this.sicilnoDataGridViewTextBoxColumn.DataPropertyName = "sicil_no";
-            this.sicilnoDataGridViewTextBoxColumn.HeaderText = "Sicil No";
-            this.sicilnoDataGridViewTextBoxColumn.Name = "sicilnoDataGridViewTextBoxColumn";
-            this.sicilnoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.personeltabloBindingSource3.DataMember = "personel_tablo";
+            this.personeltabloBindingSource3.DataSource = this.personel_sistemiDataSet;
             // 
             // personel_DataGrid
             // 
-            this.personel_DataGrid.AllowUserToAddRows = false;
-            this.personel_DataGrid.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.personel_DataGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.personel_DataGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.personel_DataGrid.AutoGenerateColumns = false;
             this.personel_DataGrid.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.personel_DataGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.personel_DataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Wheat;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.personel_DataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.personel_DataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.personel_DataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.personel_DataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.personelidDataGridViewTextBoxColumn,
             this.sicilnoDataGridViewTextBoxColumn,
             this.tCDataGridViewTextBoxColumn,
             this.adDataGridViewTextBoxColumn,
@@ -649,32 +589,103 @@
             this.telDataGridViewTextBoxColumn,
             this.epostaDataGridViewTextBoxColumn,
             this.adresDataGridViewTextBoxColumn});
-            this.personel_DataGrid.DataSource = this.personeltabloBindingSource3;
+            this.personel_DataGrid.DataSource = this.personeltabloBindingSource4;
             this.personel_DataGrid.DoubleBuffered = true;
             this.personel_DataGrid.EnableHeadersVisualStyles = false;
-            this.personel_DataGrid.HeaderBgColor = System.Drawing.Color.Wheat;
-            this.personel_DataGrid.HeaderForeColor = System.Drawing.Color.Black;
-            this.personel_DataGrid.Location = new System.Drawing.Point(384, 116);
+            this.personel_DataGrid.HeaderBgColor = System.Drawing.Color.Black;
+            this.personel_DataGrid.HeaderForeColor = System.Drawing.Color.White;
+            this.personel_DataGrid.Location = new System.Drawing.Point(411, 152);
             this.personel_DataGrid.Name = "personel_DataGrid";
-            this.personel_DataGrid.ReadOnly = true;
             this.personel_DataGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.personel_DataGrid.Size = new System.Drawing.Size(1039, 544);
-            this.personel_DataGrid.TabIndex = 53;
-            this.personel_DataGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.personel_DataGrid_CellContentClick);
+            this.personel_DataGrid.Size = new System.Drawing.Size(983, 356);
+            this.personel_DataGrid.TabIndex = 55;
+            this.personel_DataGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bunifuCustomDataGrid1_CellContentClick);
             // 
-            // personeltabloBindingSource3
+            // personelsistemiDataSetBindingSource
             // 
-            this.personeltabloBindingSource3.DataMember = "personel_tablo";
-            this.personeltabloBindingSource3.DataSource = this.personel_sistemiDataSet;
+            this.personelsistemiDataSetBindingSource.DataSource = this.personel_sistemiDataSet;
+            this.personelsistemiDataSetBindingSource.Position = 0;
+            // 
+            // personeltabloBindingSource4
+            // 
+            this.personeltabloBindingSource4.DataMember = "personel_tablo";
+            this.personeltabloBindingSource4.DataSource = this.personelsistemiDataSetBindingSource;
+            // 
+            // personelidDataGridViewTextBoxColumn
+            // 
+            this.personelidDataGridViewTextBoxColumn.DataPropertyName = "personel_id";
+            this.personelidDataGridViewTextBoxColumn.HeaderText = "personel_id";
+            this.personelidDataGridViewTextBoxColumn.Name = "personelidDataGridViewTextBoxColumn";
+            this.personelidDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // sicilnoDataGridViewTextBoxColumn
+            // 
+            this.sicilnoDataGridViewTextBoxColumn.DataPropertyName = "sicil_no";
+            this.sicilnoDataGridViewTextBoxColumn.HeaderText = "sicil_no";
+            this.sicilnoDataGridViewTextBoxColumn.Name = "sicilnoDataGridViewTextBoxColumn";
+            // 
+            // tCDataGridViewTextBoxColumn
+            // 
+            this.tCDataGridViewTextBoxColumn.DataPropertyName = "TC";
+            this.tCDataGridViewTextBoxColumn.HeaderText = "TC";
+            this.tCDataGridViewTextBoxColumn.Name = "tCDataGridViewTextBoxColumn";
+            // 
+            // adDataGridViewTextBoxColumn
+            // 
+            this.adDataGridViewTextBoxColumn.DataPropertyName = "ad";
+            this.adDataGridViewTextBoxColumn.HeaderText = "ad";
+            this.adDataGridViewTextBoxColumn.Name = "adDataGridViewTextBoxColumn";
+            // 
+            // soyadDataGridViewTextBoxColumn
+            // 
+            this.soyadDataGridViewTextBoxColumn.DataPropertyName = "soyad";
+            this.soyadDataGridViewTextBoxColumn.HeaderText = "soyad";
+            this.soyadDataGridViewTextBoxColumn.Name = "soyadDataGridViewTextBoxColumn";
+            // 
+            // cinsiyetDataGridViewTextBoxColumn
+            // 
+            this.cinsiyetDataGridViewTextBoxColumn.DataPropertyName = "cinsiyet";
+            this.cinsiyetDataGridViewTextBoxColumn.HeaderText = "cinsiyet";
+            this.cinsiyetDataGridViewTextBoxColumn.Name = "cinsiyetDataGridViewTextBoxColumn";
+            // 
+            // levelDataGridViewTextBoxColumn
+            // 
+            this.levelDataGridViewTextBoxColumn.DataPropertyName = "level";
+            this.levelDataGridViewTextBoxColumn.HeaderText = "level";
+            this.levelDataGridViewTextBoxColumn.Name = "levelDataGridViewTextBoxColumn";
+            // 
+            // goreviDataGridViewTextBoxColumn
+            // 
+            this.goreviDataGridViewTextBoxColumn.DataPropertyName = "gorevi";
+            this.goreviDataGridViewTextBoxColumn.HeaderText = "gorevi";
+            this.goreviDataGridViewTextBoxColumn.Name = "goreviDataGridViewTextBoxColumn";
+            // 
+            // telDataGridViewTextBoxColumn
+            // 
+            this.telDataGridViewTextBoxColumn.DataPropertyName = "tel";
+            this.telDataGridViewTextBoxColumn.HeaderText = "tel";
+            this.telDataGridViewTextBoxColumn.Name = "telDataGridViewTextBoxColumn";
+            // 
+            // epostaDataGridViewTextBoxColumn
+            // 
+            this.epostaDataGridViewTextBoxColumn.DataPropertyName = "eposta";
+            this.epostaDataGridViewTextBoxColumn.HeaderText = "eposta";
+            this.epostaDataGridViewTextBoxColumn.Name = "epostaDataGridViewTextBoxColumn";
+            // 
+            // adresDataGridViewTextBoxColumn
+            // 
+            this.adresDataGridViewTextBoxColumn.DataPropertyName = "adres";
+            this.adresDataGridViewTextBoxColumn.HeaderText = "adres";
+            this.adresDataGridViewTextBoxColumn.Name = "adresDataGridViewTextBoxColumn";
             // 
             // Personel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PeachPuff;
-            this.ClientSize = new System.Drawing.Size(1435, 722);
-            this.Controls.Add(this.txt_ara);
+            this.ClientSize = new System.Drawing.Size(1386, 722);
             this.Controls.Add(this.personel_DataGrid);
+            this.Controls.Add(this.txt_ara);
             this.Controls.Add(this.bunifuImageButton1);
             this.Controls.Add(this.btn_Sil);
             this.Controls.Add(this.txt_sicil);
@@ -714,8 +725,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.personeltabloBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.personel_sistemiDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.personeltabloBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.personel_DataGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.personeltabloBindingSource3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personel_DataGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personelsistemiDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personeltabloBindingSource4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -752,7 +765,9 @@
         private personel_sistemiDataSet personel_sistemiDataSet1;
         private System.Windows.Forms.BindingSource personeltabloBindingSource2;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txt_ara;
+        private System.Windows.Forms.BindingSource personeltabloBindingSource3;
         private Bunifu.Framework.UI.BunifuCustomDataGrid personel_DataGrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn personelidDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn sicilnoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tCDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn adDataGridViewTextBoxColumn;
@@ -763,6 +778,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn telDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn epostaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn adresDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource personeltabloBindingSource3;
+        private System.Windows.Forms.BindingSource personeltabloBindingSource4;
+        private System.Windows.Forms.BindingSource personelsistemiDataSetBindingSource;
     }
 }

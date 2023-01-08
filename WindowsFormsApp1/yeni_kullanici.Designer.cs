@@ -134,6 +134,7 @@
             this.bunifuGradientPanel1.Quality = 10;
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(1164, 77);
             this.bunifuGradientPanel1.TabIndex = 3;
+            this.bunifuGradientPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.bunifuGradientPanel1_Paint);
             this.bunifuGradientPanel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bunifuGradientPanel1_MouseDown);
             this.bunifuGradientPanel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.bunifuGradientPanel1_MouseMove);
             this.bunifuGradientPanel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.bunifuGradientPanel1_MouseUp);
@@ -287,6 +288,7 @@
             this.txt_Eposta.TabIndex = 8;
             this.txt_Eposta.Text = "E-Posta Adresi";
             this.txt_Eposta.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txt_Eposta.OnValueChanged += new System.EventHandler(this.txt_Eposta_OnValueChanged);
             this.txt_Eposta.Enter += new System.EventHandler(this.txt_Eposta_Enter);
             this.txt_Eposta.Leave += new System.EventHandler(this.txt_Eposta_Leave);
             // 

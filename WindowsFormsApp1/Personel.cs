@@ -267,5 +267,15 @@ namespace WindowsFormsApp1
             personel_DataGrid.DataSource = dset.Tables[0];
             baglanti.Close();
         }
+
+        private void bunifuCustomDataGrid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void bunifuGradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -32,11 +32,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(vardiya));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
@@ -46,6 +46,11 @@
             this.bunifuImageButton4 = new Bunifu.Framework.UI.BunifuImageButton();
             this.image_geri = new Bunifu.Framework.UI.BunifuImageButton();
             this.data_pazartesi_0 = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kampusgirisBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.personel_sistemiDataSet = new WindowsFormsApp1.personel_sistemiDataSet();
             this.lbl_pazatesi = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.lbl_sali = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.lbl_carsanba = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -54,27 +59,23 @@
             this.lbl_cumartesi = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.lbl_pazar = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.data_ici_pazartesi_8 = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel6 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.personel_sistemiDataSet = new WindowsFormsApp1.personel_sistemiDataSet();
-            this.kampusgirisBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.kampus_girisTableAdapter = new WindowsFormsApp1.personel_sistemiDataSetTableAdapters.kampus_girisTableAdapter();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kampusiciBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.kampus_iciTableAdapter = new WindowsFormsApp1.personel_sistemiDataSetTableAdapters.kampus_iciTableAdapter();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kampusiciBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuCustomLabel6 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.kampus_girisTableAdapter = new WindowsFormsApp1.personel_sistemiDataSetTableAdapters.kampus_girisTableAdapter();
+            this.kampus_iciTableAdapter = new WindowsFormsApp1.personel_sistemiDataSetTableAdapters.kampus_iciTableAdapter();
+            this.btn_vardiaOlustur = new System.Windows.Forms.Button();
             this.bunifuGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.image_geri)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.data_pazartesi_0)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.data_ici_pazartesi_8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.personel_sistemiDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kampusgirisBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personel_sistemiDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.data_ici_pazartesi_8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kampusiciBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -98,8 +99,9 @@
             this.bunifuGradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(1392, 77);
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(1386, 77);
             this.bunifuGradientPanel1.TabIndex = 13;
+            this.bunifuGradientPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.bunifuGradientPanel1_Paint);
             this.bunifuGradientPanel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bunifuGradientPanel1_MouseDown);
             this.bunifuGradientPanel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.bunifuGradientPanel1_MouseMove);
             this.bunifuGradientPanel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.bunifuGradientPanel1_MouseUp);
@@ -188,6 +190,60 @@
             this.data_pazartesi_0.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.data_pazartesi_0.Size = new System.Drawing.Size(744, 305);
             this.data_pazartesi_0.TabIndex = 19;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "00:00-08:00";
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle7.Format = "t";
+            dataGridViewCellStyle7.NullValue = null;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle7;
+            this.dataGridViewTextBoxColumn1.HeaderText = "00:00-08:00";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn1.Width = 233;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "08:00-16:00";
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle8.Format = "t";
+            dataGridViewCellStyle8.NullValue = null;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle8;
+            this.dataGridViewTextBoxColumn2.HeaderText = "08:00-16:00";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn2.Width = 233;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "16:00-24:00";
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle9.Format = "t";
+            dataGridViewCellStyle9.NullValue = null;
+            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle9;
+            this.dataGridViewTextBoxColumn3.HeaderText = "16:00-24:00";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn3.Width = 233;
+            // 
+            // kampusgirisBindingSource
+            // 
+            this.kampusgirisBindingSource.DataMember = "kampus_giris";
+            this.kampusgirisBindingSource.DataSource = this.personel_sistemiDataSet;
+            // 
+            // personel_sistemiDataSet
+            // 
+            this.personel_sistemiDataSet.DataSetName = "personel_sistemiDataSet";
+            this.personel_sistemiDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // lbl_pazatesi
             // 
@@ -293,93 +349,6 @@
             this.data_ici_pazartesi_8.Size = new System.Drawing.Size(509, 305);
             this.data_ici_pazartesi_8.TabIndex = 49;
             // 
-            // bunifuCustomLabel5
-            // 
-            this.bunifuCustomLabel5.AutoSize = true;
-            this.bunifuCustomLabel5.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bunifuCustomLabel5.Location = new System.Drawing.Point(864, 103);
-            this.bunifuCustomLabel5.Name = "bunifuCustomLabel5";
-            this.bunifuCustomLabel5.Size = new System.Drawing.Size(67, 16);
-            this.bunifuCustomLabel5.TabIndex = 66;
-            this.bunifuCustomLabel5.Text = "Kampüs içi:";
-            // 
-            // bunifuCustomLabel6
-            // 
-            this.bunifuCustomLabel6.AutoSize = true;
-            this.bunifuCustomLabel6.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bunifuCustomLabel6.Location = new System.Drawing.Point(16, 103);
-            this.bunifuCustomLabel6.Name = "bunifuCustomLabel6";
-            this.bunifuCustomLabel6.Size = new System.Drawing.Size(81, 16);
-            this.bunifuCustomLabel6.TabIndex = 67;
-            this.bunifuCustomLabel6.Text = "Kampüs Girişi:";
-            // 
-            // personel_sistemiDataSet
-            // 
-            this.personel_sistemiDataSet.DataSetName = "personel_sistemiDataSet";
-            this.personel_sistemiDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // kampusgirisBindingSource
-            // 
-            this.kampusgirisBindingSource.DataMember = "kampus_giris";
-            this.kampusgirisBindingSource.DataSource = this.personel_sistemiDataSet;
-            // 
-            // kampus_girisTableAdapter
-            // 
-            this.kampus_girisTableAdapter.ClearBeforeFill = true;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "00:00-08:00";
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle7.Format = "t";
-            dataGridViewCellStyle7.NullValue = null;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle7;
-            this.dataGridViewTextBoxColumn1.HeaderText = "00:00-08:00";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumn1.Width = 233;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "08:00-16:00";
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle8.Format = "t";
-            dataGridViewCellStyle8.NullValue = null;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle8;
-            this.dataGridViewTextBoxColumn2.HeaderText = "08:00-16:00";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumn2.Width = 233;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "16:00-24:00";
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle9.Format = "t";
-            dataGridViewCellStyle9.NullValue = null;
-            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle9;
-            this.dataGridViewTextBoxColumn3.HeaderText = "16:00-24:00";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumn3.Width = 233;
-            // 
-            // kampusiciBindingSource
-            // 
-            this.kampusiciBindingSource.DataMember = "kampus_ici";
-            this.kampusiciBindingSource.DataSource = this.personel_sistemiDataSet;
-            // 
-            // kampus_iciTableAdapter
-            // 
-            this.kampus_iciTableAdapter.ClearBeforeFill = true;
-            // 
             // dataGridViewTextBoxColumn4
             // 
             this.dataGridViewTextBoxColumn4.DataPropertyName = "08:00-16:00";
@@ -408,11 +377,55 @@
             this.dataGridViewTextBoxColumn5.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewTextBoxColumn5.Width = 233;
             // 
+            // kampusiciBindingSource
+            // 
+            this.kampusiciBindingSource.DataMember = "kampus_ici";
+            this.kampusiciBindingSource.DataSource = this.personel_sistemiDataSet;
+            // 
+            // bunifuCustomLabel5
+            // 
+            this.bunifuCustomLabel5.AutoSize = true;
+            this.bunifuCustomLabel5.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.bunifuCustomLabel5.Location = new System.Drawing.Point(864, 103);
+            this.bunifuCustomLabel5.Name = "bunifuCustomLabel5";
+            this.bunifuCustomLabel5.Size = new System.Drawing.Size(67, 16);
+            this.bunifuCustomLabel5.TabIndex = 66;
+            this.bunifuCustomLabel5.Text = "Kampüs içi:";
+            // 
+            // bunifuCustomLabel6
+            // 
+            this.bunifuCustomLabel6.AutoSize = true;
+            this.bunifuCustomLabel6.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.bunifuCustomLabel6.Location = new System.Drawing.Point(16, 103);
+            this.bunifuCustomLabel6.Name = "bunifuCustomLabel6";
+            this.bunifuCustomLabel6.Size = new System.Drawing.Size(81, 16);
+            this.bunifuCustomLabel6.TabIndex = 67;
+            this.bunifuCustomLabel6.Text = "Kampüs Girişi:";
+            // 
+            // kampus_girisTableAdapter
+            // 
+            this.kampus_girisTableAdapter.ClearBeforeFill = true;
+            // 
+            // kampus_iciTableAdapter
+            // 
+            this.kampus_iciTableAdapter.ClearBeforeFill = true;
+            // 
+            // btn_vardiaOlustur
+            // 
+            this.btn_vardiaOlustur.Location = new System.Drawing.Point(419, 556);
+            this.btn_vardiaOlustur.Name = "btn_vardiaOlustur";
+            this.btn_vardiaOlustur.Size = new System.Drawing.Size(117, 34);
+            this.btn_vardiaOlustur.TabIndex = 68;
+            this.btn_vardiaOlustur.Text = "Vardia Oluştur";
+            this.btn_vardiaOlustur.UseVisualStyleBackColor = true;
+            this.btn_vardiaOlustur.Click += new System.EventHandler(this.btn_vardiaOlustur_Click);
+            // 
             // vardiya
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1392, 718);
+            this.ClientSize = new System.Drawing.Size(1386, 718);
+            this.Controls.Add(this.btn_vardiaOlustur);
             this.Controls.Add(this.bunifuCustomLabel6);
             this.Controls.Add(this.bunifuCustomLabel5);
             this.Controls.Add(this.data_ici_pazartesi_8);
@@ -441,9 +454,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.image_geri)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.data_pazartesi_0)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.data_ici_pazartesi_8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.personel_sistemiDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kampusgirisBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personel_sistemiDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.data_ici_pazartesi_8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kampusiciBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -479,5 +492,6 @@
         private personel_sistemiDataSetTableAdapters.kampus_iciTableAdapter kampus_iciTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.Button btn_vardiaOlustur;
     }
 }
