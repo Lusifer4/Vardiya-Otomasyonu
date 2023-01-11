@@ -124,6 +124,7 @@
             this.txt_Kullanici.TabIndex = 1;
             this.txt_Kullanici.Text = "Kulanici Adı";
             this.txt_Kullanici.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txt_Kullanici.OnValueChanged += new System.EventHandler(this.txt_Kullanici_OnValueChanged);
             this.txt_Kullanici.Enter += new System.EventHandler(this.txt_Kullanici_Enter);
             this.txt_Kullanici.Leave += new System.EventHandler(this.txt_Kullanici_Leave);
             // 

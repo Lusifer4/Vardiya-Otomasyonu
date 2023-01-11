@@ -19,33 +19,10 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
-
-
-        bool durum;
-            void mukerrer() {
-
-            baglanti.Open();
-            SqlCommand komut = new SqlCommand("select * from mudur_tablo where eposta=@eposta", baglanti);
-            komut.Parameters.AddWithValue("@eposta", txt_Eposta);
-            SqlDataReader dr = komut.ExecuteReader();
-
-            if (dr.Read())
-            {
-                durum = false;
-
-            }
-            else
-            {
-                durum = true;
-            }
-            baglanti.Close();
-        
-        }
-
-   
+  
 
         private void yeni_kullanici_Load(object sender, EventArgs e)
-        {
+        { // form yüklendiğinde çalışır
             string seciniz = "Seçiniz";
            if(box_cinsiyet.Text == "")
             {
@@ -167,7 +144,7 @@ namespace WindowsFormsApp1
             }
         }
         private void txt_sicil_Enter(object sender, EventArgs e)
-        {
+        { 
             if (txt_Adres.Text == "Sicil Numarası")
             {
                 txt_Adres.Text = "";
@@ -175,8 +152,8 @@ namespace WindowsFormsApp1
         }
 
         private void txt_sicil_Leave(object sender, EventArgs e)
-        {
-            if (txt_Adres.Text == "")
+        {   // sicil numarasnı textboxa yazdıktan sonra çıkınca textboxa yazılan değer silinir
+            if (txt_Adres.Text == "")  
             {
                 txt_Adres.Text = "Sicil Numarası";
             }
@@ -194,7 +171,7 @@ namespace WindowsFormsApp1
         }
 
         private void yeni_kullanici_MouseMove(object sender, MouseEventArgs e)
-        {
+        {   
             if (move == true)
             {
                 this.SetDesktopLocation(MousePosition.X - mouse_x, MousePosition.Y - mouse_y);
@@ -207,7 +184,7 @@ namespace WindowsFormsApp1
         }
 
         private void bunifuGradientPanel1_MouseDown(object sender, MouseEventArgs e)
-        {
+        {       // mouse tıklayıp gezdirince program taşınıyo
             move = true;
             mouse_x = e.X;
             mouse_y = e.Y;
@@ -236,45 +213,34 @@ namespace WindowsFormsApp1
 
         private void btnGiris_Click(object sender, EventArgs e)//kaydet buttonu
         {
+            // Müdür ve Personel için ayrı ayrı kayıt yapılmasını sağlıyor
             if (box_Görevli.Text== "Müdür")
             {
                 try
                 {
 
-
-
-                     mukerrer();
-                    if (durum == true)
-                    {
-
-
                         baglanti = new SqlConnection(conString);
                         baglanti.Open();
                         string sqlKomut = "insert into mudur_tablo(sicil_no,TC,ad,soyad,cinsiyet,level,eposta,adres,tel)values(@sicil_no,@TC,@ad,@soyad,@cinsiyet,@level,@eposta,@adres,@tel)";
                         SqlCommand komut = new SqlCommand(sqlKomut, baglanti);
+
+                         // Aşağıdaki kodlar ile veritabanına kayıt işlemi yapılıyor.
                         komut.Parameters.AddWithValue("@sicil_no", txt_sicil.Text);
                         komut.Parameters.AddWithValue("@TC", txt_TC.Text);
                         komut.Parameters.AddWithValue("@ad", txt_Ad.Text);
                         komut.Parameters.AddWithValue("@soyad", txt_Soyad.Text);
                         komut.Parameters.AddWithValue("@cinsiyet", box_cinsiyet.Text);
                         komut.Parameters.AddWithValue("@level", box_Görevli.Text);
-
                         komut.Parameters.AddWithValue("@tel", txt_Tel.Text);
                         komut.Parameters.AddWithValue("@eposta", txt_Eposta.Text);
                         komut.Parameters.AddWithValue("@adres", txt_Adres.Text);
-
                         komut.ExecuteNonQuery();
                         MessageBox.Show("Kulanıcı Eklendi");
-                    }
-                    else
-                    {
-                        MessageBox.Show("HATA!");
-                    }
 
                 }
 
                 catch (Exception ex)
-                {
+                {       // Hata oluşursa ekrana hata mesajı veriyor.
                     MessageBox.Show("SQL Query Sırasında hata oluştu! " + ex);
                 }
                 finally
@@ -283,18 +249,12 @@ namespace WindowsFormsApp1
                     {
                         baglanti.Close();
                     }
-
                 }
             }
             else { 
             try
             {
-
-                   /* mukerrer();
-                    if(durum == true)
-                    {*/
-
-                   
+                // Yeni kullanıcı ekler
                 baglanti = new SqlConnection(conString);
                 baglanti.Open();
                 string sqlKomut = "insert into personel_tablo(sicil_no,TC,ad,soyad,cinsiyet,level,gorevi,eposta,adres,tel)values(@sicil_no,@TC,@ad,@soyad,@cinsiyet,@level,@gorevi,@eposta,@adres,@tel)";
@@ -312,19 +272,15 @@ namespace WindowsFormsApp1
 
                 komut.ExecuteNonQuery();
                     MessageBox.Show("Kulanıcı Eklendi");
-                    /*}
-                    else
-                    {
-                        MessageBox.Show("Bu kayıt zaten var", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    }*/
+
             }
             catch (Exception ex)
             {
                 MessageBox.Show("SQL Query Sırasında hata oluştu! " + ex);
             }
             finally
-            {
-                if (baglanti != null)
+                { // Eğer bağlantı açıksa kapatılıyor
+                    if (baglanti != null)
                 {
                     baglanti.Close();
                 }
@@ -335,17 +291,15 @@ namespace WindowsFormsApp1
         }
         public void formHarfGirisSorgusu(KeyPressEventArgs e)
         {
-            //MessageBox.Show("wads");
+
 
             e.Handled = !char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsSeparator(e.KeyChar);
         }
 
         public void formRakamGirisSorgusu(KeyPressEventArgs e)
         {
-            //MessageBox.Show("wads");
+
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
-
-
         }
 
         private void txt_TC_KeyPress(object sender, KeyPressEventArgs e)//harf girişini engeleme

@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Personel));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btn_Sil = new Bunifu.Framework.UI.BunifuThinButton2();
             this.txt_sicil = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.box_cinsiyet = new System.Windows.Forms.ComboBox();
@@ -56,27 +56,29 @@
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.personelTabloBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.personel_sistemiDataSet = new WindowsFormsApp1.personel_sistemiDataSet();
             this.personeltabloBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.personel_tabloTableAdapter = new WindowsFormsApp1.personel_sistemiDataSetTableAdapters.personel_tabloTableAdapter();
-            this.personel_sistemiDataSet1 = new WindowsFormsApp1.personel_sistemiDataSet();
             this.personeltabloBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.txt_ara = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.personeltabloBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.personel_DataGrid = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.personelsistemiDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.personeltabloBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
-            this.personelidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sicilnoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tCDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.adDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.soyadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cinsiyetDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.levelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.goreviDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.epostaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.adresDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.personelsistemiDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.personeltabloBindingSource5 = new System.Windows.Forms.BindingSource(this.components);
+            this.personel_DataGrid = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.personeltabloBindingSource7 = new System.Windows.Forms.BindingSource(this.components);
+            this.personel_sistemiDataSet3 = new WindowsFormsApp1.personel_sistemiDataSet();
+            this.personeltabloBindingSource6 = new System.Windows.Forms.BindingSource(this.components);
+            this.personel_tabloTableAdapter2 = new WindowsFormsApp1.personel_sistemiDataSetTableAdapters.personel_tabloTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.image_geri)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -84,14 +86,16 @@
             this.bunifuGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.personelTabloBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.personel_sistemiDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.personeltabloBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.personel_sistemiDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.personeltabloBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.personeltabloBindingSource3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.personel_DataGrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.personelsistemiDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.personeltabloBindingSource4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personelsistemiDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personeltabloBindingSource5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personel_DataGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personeltabloBindingSource7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personel_sistemiDataSet3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personeltabloBindingSource6)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_Sil
@@ -509,29 +513,13 @@
             this.bunifuImageButton1.Zoom = 10;
             this.bunifuImageButton1.Click += new System.EventHandler(this.bunifuImageButton1_Click);
             // 
-            // personel_sistemiDataSet
-            // 
-            this.personel_sistemiDataSet.DataSetName = "personel_sistemiDataSet";
-            this.personel_sistemiDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // personeltabloBindingSource1
             // 
             this.personeltabloBindingSource1.DataMember = "personel_tablo";
-            this.personeltabloBindingSource1.DataSource = this.personel_sistemiDataSet;
-            // 
-            // personel_tabloTableAdapter
-            // 
-            this.personel_tabloTableAdapter.ClearBeforeFill = true;
-            // 
-            // personel_sistemiDataSet1
-            // 
-            this.personel_sistemiDataSet1.DataSetName = "personel_sistemiDataSet";
-            this.personel_sistemiDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // personeltabloBindingSource2
             // 
             this.personeltabloBindingSource2.DataMember = "personel_tablo";
-            this.personeltabloBindingSource2.DataSource = this.personel_sistemiDataSet1;
             // 
             // txt_ara
             // 
@@ -545,7 +533,7 @@
             this.txt_ara.LineIdleColor = System.Drawing.Color.Black;
             this.txt_ara.LineMouseHoverColor = System.Drawing.Color.Black;
             this.txt_ara.LineThickness = 2;
-            this.txt_ara.Location = new System.Drawing.Point(1207, 86);
+            this.txt_ara.Location = new System.Drawing.Point(1147, 86);
             this.txt_ara.Name = "txt_ara";
             this.txt_ara.Size = new System.Drawing.Size(216, 27);
             this.txt_ara.TabIndex = 54;
@@ -558,132 +546,144 @@
             // personeltabloBindingSource3
             // 
             this.personeltabloBindingSource3.DataMember = "personel_tablo";
-            this.personeltabloBindingSource3.DataSource = this.personel_sistemiDataSet;
-            // 
-            // personel_DataGrid
-            // 
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.personel_DataGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.personel_DataGrid.AutoGenerateColumns = false;
-            this.personel_DataGrid.BackgroundColor = System.Drawing.Color.Gainsboro;
-            this.personel_DataGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.personel_DataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.personel_DataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.personel_DataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.personel_DataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.personelidDataGridViewTextBoxColumn,
-            this.sicilnoDataGridViewTextBoxColumn,
-            this.tCDataGridViewTextBoxColumn,
-            this.adDataGridViewTextBoxColumn,
-            this.soyadDataGridViewTextBoxColumn,
-            this.cinsiyetDataGridViewTextBoxColumn,
-            this.levelDataGridViewTextBoxColumn,
-            this.goreviDataGridViewTextBoxColumn,
-            this.telDataGridViewTextBoxColumn,
-            this.epostaDataGridViewTextBoxColumn,
-            this.adresDataGridViewTextBoxColumn});
-            this.personel_DataGrid.DataSource = this.personeltabloBindingSource4;
-            this.personel_DataGrid.DoubleBuffered = true;
-            this.personel_DataGrid.EnableHeadersVisualStyles = false;
-            this.personel_DataGrid.HeaderBgColor = System.Drawing.Color.Black;
-            this.personel_DataGrid.HeaderForeColor = System.Drawing.Color.White;
-            this.personel_DataGrid.Location = new System.Drawing.Point(411, 152);
-            this.personel_DataGrid.Name = "personel_DataGrid";
-            this.personel_DataGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.personel_DataGrid.Size = new System.Drawing.Size(983, 356);
-            this.personel_DataGrid.TabIndex = 55;
-            this.personel_DataGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bunifuCustomDataGrid1_CellContentClick);
-            // 
-            // personelsistemiDataSetBindingSource
-            // 
-            this.personelsistemiDataSetBindingSource.DataSource = this.personel_sistemiDataSet;
-            this.personelsistemiDataSetBindingSource.Position = 0;
             // 
             // personeltabloBindingSource4
             // 
             this.personeltabloBindingSource4.DataMember = "personel_tablo";
             this.personeltabloBindingSource4.DataSource = this.personelsistemiDataSetBindingSource;
             // 
-            // personelidDataGridViewTextBoxColumn
+            // personeltabloBindingSource5
             // 
-            this.personelidDataGridViewTextBoxColumn.DataPropertyName = "personel_id";
-            this.personelidDataGridViewTextBoxColumn.HeaderText = "personel_id";
-            this.personelidDataGridViewTextBoxColumn.Name = "personelidDataGridViewTextBoxColumn";
-            this.personelidDataGridViewTextBoxColumn.ReadOnly = true;
+            this.personeltabloBindingSource5.DataMember = "personel_tablo";
             // 
-            // sicilnoDataGridViewTextBoxColumn
+            // personel_DataGrid
             // 
-            this.sicilnoDataGridViewTextBoxColumn.DataPropertyName = "sicil_no";
-            this.sicilnoDataGridViewTextBoxColumn.HeaderText = "sicil_no";
-            this.sicilnoDataGridViewTextBoxColumn.Name = "sicilnoDataGridViewTextBoxColumn";
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.personel_DataGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.personel_DataGrid.AutoGenerateColumns = false;
+            this.personel_DataGrid.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.personel_DataGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.personel_DataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.personel_DataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.personel_DataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.personel_DataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewTextBoxColumn11});
+            this.personel_DataGrid.DataSource = this.personeltabloBindingSource7;
+            this.personel_DataGrid.DoubleBuffered = true;
+            this.personel_DataGrid.EnableHeadersVisualStyles = false;
+            this.personel_DataGrid.HeaderBgColor = System.Drawing.Color.Black;
+            this.personel_DataGrid.HeaderForeColor = System.Drawing.Color.White;
+            this.personel_DataGrid.Location = new System.Drawing.Point(354, 150);
+            this.personel_DataGrid.Name = "personel_DataGrid";
+            this.personel_DataGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.personel_DataGrid.Size = new System.Drawing.Size(1020, 337);
+            this.personel_DataGrid.TabIndex = 55;
+            this.personel_DataGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.personel_DataGrid_CellContentClick_1);
             // 
-            // tCDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn1
             // 
-            this.tCDataGridViewTextBoxColumn.DataPropertyName = "TC";
-            this.tCDataGridViewTextBoxColumn.HeaderText = "TC";
-            this.tCDataGridViewTextBoxColumn.Name = "tCDataGridViewTextBoxColumn";
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "personel_id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "personel_id";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
-            // adDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn2
             // 
-            this.adDataGridViewTextBoxColumn.DataPropertyName = "ad";
-            this.adDataGridViewTextBoxColumn.HeaderText = "ad";
-            this.adDataGridViewTextBoxColumn.Name = "adDataGridViewTextBoxColumn";
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "sicil_no";
+            this.dataGridViewTextBoxColumn2.HeaderText = "sicil_no";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
-            // soyadDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn3
             // 
-            this.soyadDataGridViewTextBoxColumn.DataPropertyName = "soyad";
-            this.soyadDataGridViewTextBoxColumn.HeaderText = "soyad";
-            this.soyadDataGridViewTextBoxColumn.Name = "soyadDataGridViewTextBoxColumn";
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "TC";
+            this.dataGridViewTextBoxColumn3.HeaderText = "TC";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             // 
-            // cinsiyetDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn4
             // 
-            this.cinsiyetDataGridViewTextBoxColumn.DataPropertyName = "cinsiyet";
-            this.cinsiyetDataGridViewTextBoxColumn.HeaderText = "cinsiyet";
-            this.cinsiyetDataGridViewTextBoxColumn.Name = "cinsiyetDataGridViewTextBoxColumn";
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "ad";
+            this.dataGridViewTextBoxColumn4.HeaderText = "ad";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             // 
-            // levelDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn5
             // 
-            this.levelDataGridViewTextBoxColumn.DataPropertyName = "level";
-            this.levelDataGridViewTextBoxColumn.HeaderText = "level";
-            this.levelDataGridViewTextBoxColumn.Name = "levelDataGridViewTextBoxColumn";
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "soyad";
+            this.dataGridViewTextBoxColumn5.HeaderText = "soyad";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             // 
-            // goreviDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn6
             // 
-            this.goreviDataGridViewTextBoxColumn.DataPropertyName = "gorevi";
-            this.goreviDataGridViewTextBoxColumn.HeaderText = "gorevi";
-            this.goreviDataGridViewTextBoxColumn.Name = "goreviDataGridViewTextBoxColumn";
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "cinsiyet";
+            this.dataGridViewTextBoxColumn6.HeaderText = "cinsiyet";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             // 
-            // telDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn7
             // 
-            this.telDataGridViewTextBoxColumn.DataPropertyName = "tel";
-            this.telDataGridViewTextBoxColumn.HeaderText = "tel";
-            this.telDataGridViewTextBoxColumn.Name = "telDataGridViewTextBoxColumn";
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "level";
+            this.dataGridViewTextBoxColumn7.HeaderText = "level";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             // 
-            // epostaDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn8
             // 
-            this.epostaDataGridViewTextBoxColumn.DataPropertyName = "eposta";
-            this.epostaDataGridViewTextBoxColumn.HeaderText = "eposta";
-            this.epostaDataGridViewTextBoxColumn.Name = "epostaDataGridViewTextBoxColumn";
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "gorevi";
+            this.dataGridViewTextBoxColumn8.HeaderText = "gorevi";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             // 
-            // adresDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn9
             // 
-            this.adresDataGridViewTextBoxColumn.DataPropertyName = "adres";
-            this.adresDataGridViewTextBoxColumn.HeaderText = "adres";
-            this.adresDataGridViewTextBoxColumn.Name = "adresDataGridViewTextBoxColumn";
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "tel";
+            this.dataGridViewTextBoxColumn9.HeaderText = "tel";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "eposta";
+            this.dataGridViewTextBoxColumn10.HeaderText = "eposta";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "adres";
+            this.dataGridViewTextBoxColumn11.HeaderText = "adres";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            // 
+            // personeltabloBindingSource7
+            // 
+            this.personeltabloBindingSource7.DataMember = "personel_tablo";
+            this.personeltabloBindingSource7.DataSource = this.personel_sistemiDataSet3;
+            // 
+            // personel_sistemiDataSet3
+            // 
+            this.personel_sistemiDataSet3.DataSetName = "personel_sistemiDataSet";
+            this.personel_sistemiDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // personel_tabloTableAdapter2
+            // 
+            this.personel_tabloTableAdapter2.ClearBeforeFill = true;
             // 
             // Personel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PeachPuff;
-            this.ClientSize = new System.Drawing.Size(1386, 722);
+            this.ClientSize = new System.Drawing.Size(1386, 788);
             this.Controls.Add(this.personel_DataGrid);
             this.Controls.Add(this.txt_ara);
             this.Controls.Add(this.bunifuImageButton1);
@@ -721,14 +721,16 @@
             this.bunifuGradientPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.personelTabloBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.personel_sistemiDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.personeltabloBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.personel_sistemiDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.personeltabloBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.personeltabloBindingSource3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.personel_DataGrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.personelsistemiDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.personeltabloBindingSource4)).EndInit();
+         //   ((System.ComponentModel.ISupportInitialize)(this.personelsistemiDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personeltabloBindingSource5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personel_DataGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personeltabloBindingSource7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personel_sistemiDataSet3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personeltabloBindingSource6)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -766,6 +768,11 @@
         private System.Windows.Forms.BindingSource personeltabloBindingSource2;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txt_ara;
         private System.Windows.Forms.BindingSource personeltabloBindingSource3;
+        private System.Windows.Forms.BindingSource personeltabloBindingSource4;
+        private System.Windows.Forms.BindingSource personelsistemiDataSetBindingSource;
+        private personel_sistemiDataSet personel_sistemiDataSet2;
+        private System.Windows.Forms.BindingSource personeltabloBindingSource5;
+        private personel_sistemiDataSetTableAdapters.personel_tabloTableAdapter personel_tabloTableAdapter1;
         private Bunifu.Framework.UI.BunifuCustomDataGrid personel_DataGrid;
         private System.Windows.Forms.DataGridViewTextBoxColumn personelidDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn sicilnoDataGridViewTextBoxColumn;
@@ -778,7 +785,20 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn telDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn epostaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn adresDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource personeltabloBindingSource4;
-        private System.Windows.Forms.BindingSource personelsistemiDataSetBindingSource;
+        private System.Windows.Forms.BindingSource personeltabloBindingSource6;
+        private personel_sistemiDataSet personel_sistemiDataSet3;
+        private System.Windows.Forms.BindingSource personeltabloBindingSource7;
+        private personel_sistemiDataSetTableAdapters.personel_tabloTableAdapter personel_tabloTableAdapter2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
     }
 }

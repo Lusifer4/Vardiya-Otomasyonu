@@ -37,9 +37,22 @@ namespace WindowsFormsApp1
 
         private void Personel_Load(object sender, EventArgs e)
         {
+            // TODO: Bu kod satırı 'personel_sistemiDataSet3.personel_tablo' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
+            this.personel_tabloTableAdapter2.Fill(this.personel_sistemiDataSet3.personel_tablo);
+            // TODO: Bu kod satırı 'personel_sistemiDataSet2.personel_tablo' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
+            //  this.personel_tabloTableAdapter1.Fill(this.personel_sistemiDataSet2.personel_tablo);
             // TODO: Bu kod satırı 'personel_sistemiDataSet1.personel_tablo' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
-            this.personel_tabloTableAdapter.Fill(this.personel_sistemiDataSet1.personel_tablo);
-            
+            //this.personel_tabloTableAdapter.Fill(this.personel_sistemiDataSet1.personel_tablo);
+
+            string yenile = "Select * from personel_tablo";
+            baglanti.Open();
+            SqlDataAdapter da = new SqlDataAdapter(yenile, baglanti);
+            SqlCommandBuilder komut = new SqlCommandBuilder(da);
+            DataSet dset = new DataSet();
+            da.Fill(dset, "personel_tablo");
+            personel_DataGrid.DataSource = dset.Tables[0];
+            baglanti.Close();
+
 
         }
         static string conString = "Data Source=.;Initial Catalog=personel_sistemi;Integrated Security=True";
@@ -47,16 +60,7 @@ namespace WindowsFormsApp1
 
         private void personel_DataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)//tablodan texboxlara aktarma
         {
-            txt_sicil.Text = personel_DataGrid.CurrentRow.Cells[0].Value.ToString();
-            txt_TC.Text = personel_DataGrid.CurrentRow.Cells[1].Value.ToString();
-            txt_Ad.Text = personel_DataGrid.CurrentRow.Cells[2].Value.ToString();
-            txt_Soyad.Text = personel_DataGrid.CurrentRow.Cells[3].Value.ToString();
-            box_cinsiyet.Text = personel_DataGrid.CurrentRow.Cells[4].Value.ToString();
-            box_level.Text = personel_DataGrid.CurrentRow.Cells[5].Value.ToString();
-            box_görevi.Text = personel_DataGrid.CurrentRow.Cells[6].Value.ToString();
-            txt_Tel.Text = personel_DataGrid.CurrentRow.Cells[7].Value.ToString();
-            txt_Eposta.Text = personel_DataGrid.CurrentRow.Cells[8].Value.ToString();
-            txt_Adres.Text = personel_DataGrid.CurrentRow.Cells[9].Value.ToString();         
+                  
         }
 
         private void txt_ara_Enter(object sender, EventArgs e)
@@ -270,12 +274,26 @@ namespace WindowsFormsApp1
 
         private void bunifuCustomDataGrid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+          
         }
 
         private void bunifuGradientPanel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void personel_DataGrid_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            txt_sicil.Text = personel_DataGrid.CurrentRow.Cells[0].Value.ToString();
+            txt_TC.Text = personel_DataGrid.CurrentRow.Cells[1].Value.ToString();
+            txt_Ad.Text = personel_DataGrid.CurrentRow.Cells[2].Value.ToString();
+            txt_Soyad.Text = personel_DataGrid.CurrentRow.Cells[3].Value.ToString();
+            box_cinsiyet.Text = personel_DataGrid.CurrentRow.Cells[4].Value.ToString();
+            box_level.Text = personel_DataGrid.CurrentRow.Cells[5].Value.ToString();
+            box_görevi.Text = personel_DataGrid.CurrentRow.Cells[6].Value.ToString();
+            txt_Tel.Text = personel_DataGrid.CurrentRow.Cells[7].Value.ToString();
+            txt_Eposta.Text = personel_DataGrid.CurrentRow.Cells[8].Value.ToString();
+            txt_Adres.Text = personel_DataGrid.CurrentRow.Cells[9].Value.ToString();
         }
     }
 }

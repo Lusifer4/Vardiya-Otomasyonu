@@ -29,9 +29,6 @@ namespace WindowsFormsApp1
             label1.Visible = true;
         }
 
-        
-
-
         #region txt
         
         #endregion
@@ -101,8 +98,10 @@ namespace WindowsFormsApp1
         
         Mudur Mudur = new Mudur();
         vardiya vardiya = new vardiya();
-        private void btnGiris_Click(object sender, EventArgs e)
-        {
+        private void btnGiris_Click(object sender, EventArgs e) // butona tıklayınca giriş yapıyor
+        { 
+            
+            // sql bağlantısı
             string conString = "Data Source=.;Initial Catalog=personel_sistemi;Integrated Security=True";
             SqlConnection baglanti = new SqlConnection(conString);
             string sorgu1 = "SELECT * FROM mudur_tablo where eposta=@eposta AND TC=@TC";
@@ -110,12 +109,9 @@ namespace WindowsFormsApp1
 
 
             string kulanici = txt_Kullanici.Text;
-            string sifre = txt_Parola.Text;
-            
-            
-
-           
-            if (Checkbox_yonetici.Checked == true)
+            string sifre = txt_Parola.Text; 
+         
+            if (Checkbox_yonetici.Checked == true) // eğer yönetici seçili ise giriş yapıyor
             {
                 SqlCommand komut1 = new SqlCommand(sorgu1, baglanti);
                 komut1.Parameters.AddWithValue("@eposta", txt_Kullanici.Text);
@@ -125,22 +121,24 @@ namespace WindowsFormsApp1
                 baglanti.Open();
                 data = komut1.ExecuteReader();
                 if (data.Read())
-                {
+                { // yönetici giriş yaptıysa yönetici formuna yönlendiriyor
+
                     Mudur.ShowDialog();
                 }
                 else { MessageBox.Show("Kullanıcı Adı veya Şifre HATALI"); }
                 baglanti.Close();
             }
             else
-            {
+            { // eğer yönetici seçili değil ise giriş yapıyor
                 SqlCommand komut2 = new SqlCommand(sorgu2, baglanti);
                 komut2.Parameters.AddWithValue("@eposta", txt_Kullanici.Text);
                 komut2.Parameters.AddWithValue("@TC", txt_Parola.Text);
                 SqlDataReader data;
                 baglanti.Open();
                 data = komut2.ExecuteReader();
-                if (data.Read())
+                if (data.Read()) 
                 {
+                    
                     vardiya.ShowDialog();
                 }
                 else { MessageBox.Show("Kullanıcı Adı veya Şifre HATALI"); }
@@ -165,6 +163,11 @@ namespace WindowsFormsApp1
         private void img_instagram_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("https://www.instagram.com/helheimyazilim/");
+        }
+
+        private void txt_Kullanici_OnValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

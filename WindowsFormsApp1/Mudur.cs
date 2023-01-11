@@ -19,24 +19,23 @@ namespace WindowsFormsApp1
         Personel per = new Personel();
         vardiya vardiya = new vardiya();
         Gecmis gecmis = new Gecmis();
-        private void bunifuImageButton1_Click(object sender, EventArgs e)//çarpı
+        private void bunifuImageButton1_Click(object sender, EventArgs e) // Çarpı butonu
         {
             Application.Exit();
         }
         
-        private void btn_Personelekle_Click(object sender, EventArgs e)//Personel butonu
+        private void btn_Personelekle_Click(object sender, EventArgs e)
         {
-            
+            // Butona basıldığında personel ekranı açılacak
             per.ShowDialog();
         }
-
+        
         private void image_geri_Click(object sender, EventArgs e)//geri tuşu
         {
             this.Close();
         }
-
-        
-        //mausele hereketleri
+                
+        //  mouse hareketleri
         bool move;
         int mouse_x;
         int mouse_y;
@@ -49,7 +48,7 @@ namespace WindowsFormsApp1
 
         private void Mudur_MouseMove(object sender, MouseEventArgs e)
         {
-            if (move == true)
+            if (move == true) 
             {
                 this.SetDesktopLocation(MousePosition.X - mouse_x, MousePosition.Y - mouse_y);
             }
@@ -81,13 +80,10 @@ namespace WindowsFormsApp1
             move = false;
         }
 
-        
-        private void btn_Vardiyadegis_Click(object sender, EventArgs e)//vardiya değiştir butonu
-        {
+        private void btn_Vardiyadegis_Click(object sender, EventArgs e)
+        {  // vardiya değiştir butonuna tıklandığında vardiya formu açılıyor
             vardiya.ShowDialog();
         }
-
-
         
         private void btn_Gecmis_Click(object sender, EventArgs e)//vardiya geçmişi butonu
         {
@@ -95,6 +91,11 @@ namespace WindowsFormsApp1
         }
 
         private void bunifuGradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void txt_Hosgeldiniz_OnValueChanged(object sender, EventArgs e)
         {
 
         }

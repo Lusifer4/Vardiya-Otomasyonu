@@ -109,6 +109,7 @@
             this.txt_Hosgeldiniz.Size = new System.Drawing.Size(749, 62);
             this.txt_Hosgeldiniz.TabIndex = 11;
             this.txt_Hosgeldiniz.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txt_Hosgeldiniz.OnValueChanged += new System.EventHandler(this.txt_Hosgeldiniz_OnValueChanged);
             // 
             // bunifuGradientPanel1
             // 
